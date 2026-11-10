@@ -1,0 +1,16 @@
+# Show the site's own page for missing addresses
+ErrorDocument 404 /404.html
+
+# Don't list folder contents
+Options -Indexes
+
+# HTML always fresh (so updates show up right away); CSS/JS/images can be cached,
+# their links already carry ?v= version tags that change on every edit
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  <FilesMatch "\.(css|js|webp|png|jpg|svg|ico|woff2)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /send-mail.php
+Disallow: /default.php
+Disallow: /AI-CONTEXT.md
+
+Sitemap: https://www.sgo.lt/sitemap.xml
